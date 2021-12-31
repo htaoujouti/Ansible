@@ -3,6 +3,8 @@
   hosts: windows
   tasks:
     - name: windows updates
-      ansible.windows.win_updates:
+      win_updates:
         category_names: "*"
-        reboot: yes
+    - name: reboot host if required
+      win_reboot:
+      when: update_result.reboot_required
