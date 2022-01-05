@@ -1,7 +1,10 @@
 ---
 - name: Add or update registry 
-  ansible.windows.win_regedit:
-    path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome
-    name: RendererCodeIntegrityEnabled
-    data: 0x00000000
-    type: dword
+  hosts: domain
+  tasks:
+    - name: update chrome regedit value
+      ansible.windows.win_regedit:
+        path: HKLM:\SOFTWARE\Policies\Google\Chrome
+        name: RendererCodeIntegrityEnabled
+        data: 0x00000000
+        type: dword
