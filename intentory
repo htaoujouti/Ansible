@@ -1,10 +1,21 @@
 192.168.91.91 ansible_user=graycom
+[domain]
+192.168.91.155
 
+[domain:vars]
+ansible_user="admin"
+ansible_password="Io.123456789**"
+ansible_port=5986
+ansible_winrm_transport=basic
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
 [windows]
 192.168.91.16
+
 [windows:vars]
 ansible_user=Administrator
 ansible_password="io.123*"
 ansible_port=5986
+ansible_winrm_transport=basic
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
