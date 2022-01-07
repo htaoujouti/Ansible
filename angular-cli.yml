@@ -1,0 +1,6 @@
+---
+- name: Install angular
+  nmp:
+    name: "@angular/cli@10"
+    global: yes
+    state: present
