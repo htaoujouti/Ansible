@@ -1,0 +1,23 @@
+---
+- name: java done
+  hosts: domain
+  tasks:
+    - name: install nodejs
+      win_chocolatey:
+        name: nodejs-lts
+        state: present
+
+    - name: install python3
+      win_chocolatey:
+        name: python3
+        state: present
+
+    - name: install python2
+      win_chocolatey:
+        name: python2
+        state: present
+
+    - name: Install angular
+      npm:
+        name: "@angular/cli"
+        state: present
