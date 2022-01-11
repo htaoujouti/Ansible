@@ -1,0 +1,10 @@
+---
+- name: check installed software
+  hosts: domain
+  tasks:
+    - 
+      name: run script
+      script: Get-InstalledApps.ps1 > "C:\Users\admin\Desktop\ansible.txt"
+      register: out
+
+    - debug: var=out.stdout_lines
