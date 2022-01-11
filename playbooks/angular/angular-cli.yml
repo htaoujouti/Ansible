@@ -16,8 +16,20 @@
       win_chocolatey:
         name: python2
         state: present
+    #- name: Install "coffee-script" node.js package globally.
+     # delegate_to: localhost
+      #community.general.npm:
+       # name: coffee-script
+        #global: yes
 
     - name: Install angular
-      npm:
-        name: "@angular/cli"
-        state: present
+      script: angular.ps1 
+      register: out
+
+    - debug: var=out.stdout_lines
+     
+    - name: Add ng to path
+      win_path:
+        elements:
+          - 'C:\Users\admin\AppData\Roaming\npm'
+      
