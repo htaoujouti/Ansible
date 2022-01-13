@@ -2,20 +2,14 @@
 - name: java done
   hosts: domain
   tasks:
-    - name: install nodejs
+    - name: install nodejs,python3 and python2
       win_chocolatey:
-        name: nodejs-lts
+        name: 
+          - nodejs-lts
+          - python3
+          - python2
         state: present
 
-    - name: install python3
-      win_chocolatey:
-        name: python3
-        state: present
-
-    - name: install python2
-      win_chocolatey:
-        name: python2
-        state: present
     #- name: Install "coffee-script" node.js package globally.
      # delegate_to: localhost
       #community.general.npm:
