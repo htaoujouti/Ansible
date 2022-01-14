@@ -3,6 +3,7 @@
   hosts: domain
   tasks:
     - name: install nodejs,python3 and python2
+      tags: always
       win_chocolatey:
         name: 
           - nodejs-lts
@@ -17,6 +18,7 @@
         #global: yes
 
     - name: Install angular
+      #tags: angular,cli    #tags utilization
       script: angular.ps1 
       register: out
 
