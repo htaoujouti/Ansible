@@ -2,5 +2,5 @@
 - name: Install all critical and security updates
   hosts: domain
   roles:
-    - win_updates
+    - update_win
 
