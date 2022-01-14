@@ -20,11 +20,21 @@ ansible_winrm_transport=basic
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
 [windows]
-192.168.91.16
+192.168.4.158
 
 [windows:vars]
-ansible_user=Administrator
+ansible_user=admin
 ansible_port=5986
 ansible_winrm_transport=basic
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
+
+[newpc]
+192.168.1.110
+[newpc:vars]
+ansible_user="admin"
+ansible_password="Io.123456789**"
+ansible_port=5985 #http connection
+ansible_winrm_transport=basic
+ansible_connection=winrm
+#ansible_winrm_server_cert_validiation=ignore
