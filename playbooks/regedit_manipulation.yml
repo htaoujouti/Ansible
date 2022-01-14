@@ -1,6 +1,6 @@
 ---
 - name: Add or update registry 
-  hosts: domain
+  hosts: newpc
   tasks:
     - name: update chrome regedit value
       ansible.windows.win_regedit:
