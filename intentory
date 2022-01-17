@@ -14,13 +14,14 @@ ansible_connection=winrm
 #ansible_winrm_server_cert_validiation=ignore
 
 [domain]
-192.168.91.155
+htaoujouti-pc.INTEG-OBJECTS.LOCAL
 [domain:vars]
-ansible_user="admin"
+ansible_user=htaoujouti@INTEG-OBJECTS.LOCAL
 ansible_port=5986
-ansible_winrm_transport=basic
+ansible_winrm_transport=kerberos
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
+become=false
 
 [windows]
 192.168.4.158
