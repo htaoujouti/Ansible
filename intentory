@@ -4,14 +4,13 @@
 ansible_user=graylogd
 
 [Dev_agent]
-192.168.1.99
+AgentAzureDV.INTEG-OBJECTS.LOCAL
 [Dev_agent:vars]
-ansible_user="admin"
-ansible_password="Io.123456789**"
-ansible_port=5985 #http connection
-ansible_winrm_transport=basic
+ansible_user=agentad@INTEG-OBJECTS.LOCAL
+ansible_port=5985
+ansible_winrm_transport=kerberos
 ansible_connection=winrm
-#ansible_winrm_server_cert_validiation=ignore
+ansible_winrm_server_cert_validiation=ignore
 
 [domain]
 htaoujouti-pc.INTEG-OBJECTS.LOCAL
