@@ -4,7 +4,7 @@
   tasks:
     - name: update chrome regedit value
       ansible.windows.win_regedit:
-        path: HKLM:\SOFTWARE\Policies\Google\Chrome
+        path: "{{regeditChrome}}"
         name: RendererCodeIntegrityEnabled
         data: 0x00000000
         type: dword
