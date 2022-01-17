@@ -1,6 +1,3 @@
-- name: java_home
-  win_environment:
-   state: present
-   name: JAVA_HOME
-   value: 'c:\program files\java\jdk1.8.0_162'
-   level: machine
+- name: reboot host if required
+  win_reboot:
+  when: update_result.reboot_required

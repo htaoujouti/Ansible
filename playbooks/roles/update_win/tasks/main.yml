@@ -1,4 +1,4 @@
 - name: windows updates
   win_updates:
     category_names: "*"
-    reboot: yes
+  notify: reboot host if required
