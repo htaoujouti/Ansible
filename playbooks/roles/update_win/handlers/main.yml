@@ -1,0 +1,6 @@
+- name: java_home
+  win_environment:
+   state: present
+   name: JAVA_HOME
+   value: 'c:\program files\java\jdk1.8.0_162'
+   level: machine
