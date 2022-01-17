@@ -1,9 +1,6 @@
 ---
 - name: Install all critical and security updates
   hosts: newpc
-  tasks:
-    - name: windows updates
-      win_updates:
-        category_names: "*"
-        reboot: yes
+  roles:
+    - win_updates
 

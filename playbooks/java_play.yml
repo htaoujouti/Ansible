@@ -3,9 +3,11 @@
   hosts: domain
   tasks:
     - name: Install Java
+      tags: always
       win_chocolatey:
         name: jdk8
         state: present
+      register: java
         #version: '8.0'
 
   #  - name: Set Java_home
@@ -14,6 +16,7 @@
   #      name: JAVA_HOME
   #      value: 'c:\program files\java\jdk1.8.0_162'
   #      level: machine
+  #    when: java.changed 
 
   #  - name: Add Java to path
   #    win_path:
