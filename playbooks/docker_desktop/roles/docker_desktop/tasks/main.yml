@@ -1,0 +1,6 @@
+- name: Install docker-desktop
+  win_chocolatey:
+    name: docker-desktop
+    version: '4.4.3'
+    state: present
+  notify: reboot host if required 
