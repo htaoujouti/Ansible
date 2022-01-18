@@ -20,7 +20,6 @@ ansible_port=5986
 ansible_winrm_transport=kerberos
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
-become=false
 
 [windows]
 192.168.4.158
