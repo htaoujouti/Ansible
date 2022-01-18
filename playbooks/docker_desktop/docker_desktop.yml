@@ -1,0 +1,6 @@
+---
+- name: install docker desktop
+  hosts: domain
+  roles:
+    - wsl_install
+    - docker_desktop
