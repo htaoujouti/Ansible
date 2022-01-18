@@ -1,0 +1,6 @@
+- name: Install wsl-ubuntu-2004
+  win_chocolatey:
+    name: wsl-ubuntu-2004
+    version: '20.4.0.20200912'
+    state: present
+  notify: reboot host if required 
