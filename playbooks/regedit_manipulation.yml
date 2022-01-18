@@ -8,3 +8,8 @@
         name: RendererCodeIntegrityEnabled
         data: 0x00000000
         type: dword
+
+#- name: Copy tomcat config copy example
+ # win_copy:
+  #  src: log4j.xml
+   # dest: '{{tc_home}}\lib\log4j.xml'
