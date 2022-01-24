@@ -1,7 +1,7 @@
 - name: Install exe or msi and use a file version for the installation check
   ansible.windows.win_package:
-    path: C:\Users\admin\Desktop\tools\FireFoxSetup93.0.exe #or network path
-    creates_path: C:\Program Files\Firefox\Firefox.exe
+    path: \\192.168.91.155\tools\Setup_x64Bit\Sep64.msi #or network path
+  #  creates_path: C:\Program Files\Firefox\Firefox.exe
    # creates_version: 16.04
     state: present
  #Run installer from mounted ISO, then unmount
@@ -14,7 +14,7 @@
 - name: Run installer from mounted ISO
   ansible.windows.win_package:
     path: '{{ disk_image_out.mount_paths[0] }}setup\setup.exe'
-    product_id: 35a4e767-0161-46b0-979f-e61f282fee21
+    #product_id: 35a4e767-0161-46b0-979f-e61f282fee21
     state: present
 
 - name: Unmount ISO
