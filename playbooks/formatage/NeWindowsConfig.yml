@@ -1,6 +1,8 @@
 ---
-- name: Install all critical and security updates
+- name: Configure new PC
   hosts: newpc
   roles:
-    - iso_exe_install
     - update_win
+    - install_tools
+    - install_browsers
+    - add-to-domain
