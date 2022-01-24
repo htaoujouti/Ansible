@@ -1,0 +1,3 @@
+- name: reboot host if required
+  win_reboot:
+  when: update_result.reboot_required
