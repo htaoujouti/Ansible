@@ -1,10 +1,10 @@
 - name: Install exe or msi and use a file version for the installation check
   ansible.windows.win_package:
-    path: C:\temp\7z.exe #or network path
-    creates_path: C:\Program Files\7-Zip\7z.exe
+    path: C:\Users\admin\Desktop\tools\FireFoxSetup93.0.exe #or network path
+    creates_path: C:\Program Files\Firefox\Firefox.exe
    # creates_version: 16.04
     state: present
-# Run installer from mounted ISO, then unmount
+ Run installer from mounted ISO, then unmount
 - name: Ensure an ISO is mounted
   community.windows.win_disk_image:
     image_path: C:\install.iso

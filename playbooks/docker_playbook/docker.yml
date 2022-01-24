@@ -57,9 +57,7 @@
       dest: /usr/local/bin/docker-compose
       mode: 'a+x'
       force: yes
-    when: >
-      docker_compose_current_version is not defined
-      or docker_compose_current_version is version(docker_compose_version, '<')
+    
   - name: Run and enable docker
     service:
       name: docker

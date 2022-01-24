@@ -1,6 +1,6 @@
 ---
 - name: Install all critical and security updates
-  hosts: domain
+  hosts: newpc
   roles:
+    - iso_exe_install
     - update_win
-

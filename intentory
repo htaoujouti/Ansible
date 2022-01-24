@@ -1,7 +1,7 @@
 [linux]
 192.168.91.91 
 [linux:vars]
-ansible_user=graylogd
+ansible_user=graylog
 
 [Dev_agent]
 AgentAzureDV.INTEG-OBJECTS.LOCAL
@@ -31,7 +31,8 @@ ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
 
 [newpc]
-192.168.1.110
+#192.168.1.110
+192.168.3.239
 [newpc:vars]
 ansible_user="admin"
 ansible_port=5985 #http connection
