@@ -6,3 +6,6 @@
     - install_tools
     - install_browsers
     - add-to-domain
+    - iso_exe_install
+    - update_win
+
