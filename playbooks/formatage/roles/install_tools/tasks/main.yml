@@ -1,0 +1,12 @@
+- name: Install Visual Studio team explorer
+  win_chocolatey:
+    name: visualstudio2017teamexplorer
+    state: present
+- name: Install MS Teams
+  win_chocolatey:
+    name: microsoft-teams
+    state: present
+- name: Install Acrobat reader
+  win_chocolatey:
+    name: adobereader
+    state: present
