@@ -2,10 +2,9 @@
 - name: Configure new PC
   hosts: newpc
   roles:
-    - update_win
     - install_tools
     - install_browsers
-    - add-to-domain
+    - add_to_domain
     - iso_exe_install
     - update_win
 
