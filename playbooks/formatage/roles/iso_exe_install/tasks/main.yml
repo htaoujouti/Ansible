@@ -1,6 +1,6 @@
 - name: Install exe or msi and use a file version for the installation check
   ansible.windows.win_package:
-    path: \\192.168.91.155\tools\Setup_x64Bit\Sep64.msi #or network path
+    path: C:\Users\admin\Desktop\tools\Setup_x64Bit\Setup.exe #or network path
   #  creates_path: C:\Program Files\Firefox\Firefox.exe
    # creates_version: 16.04
     state: present
