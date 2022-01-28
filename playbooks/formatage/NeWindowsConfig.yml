@@ -2,6 +2,7 @@
 - name: Configure new PC
   hosts: newpc
   roles:
+    - restart
     - install_tools
     - install_browsers
     - iso_exe_install 
