@@ -4,6 +4,7 @@
   #  creates_path: C:\Program Files\Firefox\Firefox.exe
    # creates_version: 16.04
     state: present
+  notify: reboot host if required
 - name: Install office
   ansible.windows.win_package:
     path: C:\Users\admin\Desktop\tools\Office_Professional_Plus_2016\setup.exe
