@@ -4,7 +4,8 @@
   roles:
     - install_tools
     - install_browsers
-    - iso_exe_install    
+    - iso_exe_install 
+    - update_win   
     - add_to_domain
-    - update_win
+    
 
