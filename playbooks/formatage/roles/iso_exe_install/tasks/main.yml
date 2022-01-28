@@ -1,19 +1,33 @@
-- name: Install exe or msi and use a file version for the installation check
+- name: Install exe or msi and // symantec
   ansible.windows.win_package:
     path: C:\Users\admin\Desktop\tools\Setup_x64Bit\Sep64.msi #or network path
   notify: reboot host if required
   #  creates_path: C:\Program Files\Firefox\Firefox.exe
    # creates_version: 16.04
+<<<<<<< HEAD
    # state: present
  #Run installer from mounted ISO, then unmount
 #- name: Ensure an ISO is mounted
  # community.windows.win_disk_image:
   #  image_path: C:\Users\admin\Desktop\tools\SW_DVD5_Office_Professional_Plus_2016_64Bit_English_MLF_X20-42432.ISO
+=======
+    state: present
+  notify: reboot host if required
+- name: Install office
+  ansible.windows.win_package:
+    path: C:\Users\admin\Desktop\tools\Office_Professional_Plus_2016\setup.exe
+    state: present
+ #Run installer from mounted ISO, then unmount
+#- name: Ensure an ISO is mounted
+ # community.windows.win_disk_image:
+  #  image_path: C:\Users\admin\Desktop\tools\MS Office\Office 2016\Office 2016 x64 bit\SW_DVD5_Office_Professional_Plus_2016_64Bit_English_MLF_X20-42432.ISO
+>>>>>>> 917a9a25594cba67562cb01b095f29fb6ff4be08
    # state: present
   #register: disk_image_out
 
 #- name: Run installer from mounted ISO
  # ansible.windows.win_package:
+<<<<<<< HEAD
   #  path: '{{ disk_image_out.mount_paths[0] }}setup.exe'
     #product_id: 35a4e767-0161-46b0-979f-e61f282fee21
    # state: present
@@ -22,3 +36,15 @@
  # community.windows.win_disk_image:
   #  image_path: C:\Users\admin\Desktop\tools\SW_DVD5_Office_Professional_Plus_2016_64Bit_English_MLF_X20-42432.ISO
    # state: absent
+=======
+  #  path: '{{ disk_image_out.mount_paths[0] }}setup\setup.exe'
+    #product_id: 35a4e767-0161-46b0-979f-e61f282fee21
+   # state: present
+
+#- name: Unmount ISO
+ # community.windows.win_disk_image:
+  #  image_path: C:\Users\admin\Desktop\tools\MS Office\Office 2016\Office 2016 x64 bit\SW_DVD5_Office_Professional_Plus_2016_64Bit_English_MLF_X20-42432.ISO
+   # state: absent
+
+    
+>>>>>>> 917a9a25594cba67562cb01b095f29fb6ff4be08
