@@ -9,5 +9,5 @@
     - restart
     - update_win   
     - add_to_domain
-    
+    - restart
 

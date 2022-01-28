@@ -1,3 +1,3 @@
 - name: Reboot a slow machine that might have lots of updates to apply
   ansible.windows.win_reboot:
-    reboot_timeout: 300
+    reboot_timeout: 3000
