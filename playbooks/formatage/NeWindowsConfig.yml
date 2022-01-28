@@ -5,7 +5,8 @@
     - restart
     - install_tools
     - install_browsers
-    - iso_exe_install 
+    - iso_exe_install
+    - restart
     - update_win   
     - add_to_domain
     
