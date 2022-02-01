@@ -1,6 +1,12 @@
 ---
 - name: Configure new PC
-  hosts: newpc
+  hosts: domain
+  gather_facts: no
+  tasks:
+  - name: install npm
+    win_chocolatey:
+      name: nodejs
+      state: present 
   roles:
     - restart
     - install_tools
@@ -8,6 +14,6 @@
     - iso_exe_install
     - restart
     - update_win   
-    - add_to_domain
+    #- add_to_domain
     - restart
 

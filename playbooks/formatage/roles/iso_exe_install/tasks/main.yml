@@ -1,3 +1,8 @@
+#- name: Install office
+ # ansible.windows.win_package:
+  #  path: C:\Users\admin\Desktop\tools\Office_Professional_Plus_2016\setup.exe
+   # state: present
+
 - name: Install exe or msi and // symantec
   ansible.windows.win_package:
     path: C:\Users\admin\Desktop\tools\Setup_x64Bit\Sep64.msi #or network path
@@ -5,7 +10,7 @@
    # creates_version: 16.04
     state: present
   notify: reboot host if required
-  
+
  #Run installer from mounted ISO, then unmount
 #- name: Ensure an ISO is mounted
  # community.windows.win_disk_image:
@@ -13,10 +18,6 @@
 #    state: present
  # notify: reboot host if required
 
-- name: Install office
-  ansible.windows.win_package:
-    path: C:\Users\admin\Desktop\tools\Office_Professional_Plus_2016\setup.exe
-    state: present
  #Run installer from mounted ISO, then unmount
 #- name: Ensure an ISO is mounted
  # community.windows.win_disk_image:
