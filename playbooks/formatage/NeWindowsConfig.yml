@@ -1,6 +1,6 @@
 ---
 - name: Configure new PC
-  hosts: domain
+  hosts: newpc
   gather_facts: no
   tasks:
   - name: install npm
