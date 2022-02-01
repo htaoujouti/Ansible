@@ -15,7 +15,8 @@ ansible_winrm_server_cert_validiation=ignore
 [domain]
 htaoujouti-pc.INTEG-OBJECTS.LOCAL
 [domain:vars]
-ansible_user=htaoujouti@INTEG-OBJECTS.LOCAL
+ansible_user=
+ansible_password=
 ansible_port=5986
 ansible_winrm_transport=kerberos
 ansible_connection=winrm
@@ -34,9 +35,12 @@ ansible_winrm_server_cert_validation=ignore
 #192.168.1.110
 #192.168.3.239
 #192.168.4.50
-192.168.1.99
+#192.168.1.99
+#192.168.1.203
+192.168.1.22
 [newpc:vars]
 ansible_user="admin"
+ansible_password=
 ansible_port=5985 #http connection
 ansible_winrm_transport=basic
 ansible_connection=winrm
