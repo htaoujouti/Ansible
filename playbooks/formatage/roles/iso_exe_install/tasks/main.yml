@@ -1,3 +1,11 @@
+- name: Install exe or msi and // epson
+  ansible.windows.win_package:
+    path: C:\Users\admin\Desktop\tools\epson16189.exe #or network path
+  #  creates_path: C:\Program Files\Firefox\Firefox.exe
+   # creates_version: 16.04
+    state: present
+  notify: reboot host if required
+  
 - name: Install exe or msi and // symantec
   ansible.windows.win_package:
     path: C:\Users\admin\Desktop\tools\Setup_x64Bit\Sep64.msi #or network path
@@ -5,6 +13,7 @@
    # creates_version: 16.04
     state: present
   notify: reboot host if required
+
 
  #Run installer from mounted ISO, then unmount
 - name: Ensure an ISO is mounted
